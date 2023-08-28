@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widt h=device-width, initial-scale=1.0">
+    <title>Weather2Day</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='public/css/result.css')}}">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="icon" href="../static/public/image/favr.png">
+</head>
+
+<body onload="Dynamic()">
+    <div class="parent" id="here">
+        <div class="child">
+            <div class="state">
+                <h5">WEATHER IN:</h5>
+                    <h1 style="font-size: 50px;position: relative;;top: -35px;white-space: nowrap">{{location}}</h1>
+            </div>
+            <div class="content">
+                <h1 class="place">TEMPERATURE 🌡️ : {{temperature}}°C</h1>
+                <h1 class="place">FEELS LIKE 🌡️ : {{feels_like}}°C</h1>
+                <h1 class="place">MINIMUM TEMPERATURE 🌡️ : {{temp_min}}°C</h1>
+                <h1 class="place">MAXIMUM TEMPERATURE 🌡️ : {{temp_max}}°C</h1>
+                <h1 class="place">HUMIDITY 💧 : {{humidity}} %</h1>
+                <h1 class="place">WEATHER 🌦️ : <span id="weathers">{{weather}}</span></h1>
+                <h1 class="place">COUNTRY 🌍 : {{country}}</h1>
+            </div>
+            <button onclick="window.location='/'"><i class="las la-undo"></i></button>
+        </div>
+        <script src="{{url_for('static', filename='public/js/result.js')}}"></script>
+</body>
+
+</html>

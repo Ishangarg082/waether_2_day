@@ -1,0 +1,86 @@
+body,
+html {
+  height: 100%;
+  margin: 0px;
+}
+@font-face {
+  font-family: Tw Cen MT;
+  src: url("../font/TCM_____.TTF");
+}
+.parent {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  background-image: url("../image/BG.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: space-around;
+  align-items: center;
+}
+.child {
+  height: 35rem;
+  width: 40rem;
+  opacity: 75%;
+  background-color: white;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 20px;
+  border-top-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  transition: background-color 0.7s, border-radius 3s;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.child:hover {
+  border: 2px solid white;
+  opacity: 75%;
+  background-color: #234;
+  border-bottom-left-radius: 90px;
+  border-top-right-radius: 90px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.child:hover .place {
+  color: white;
+}
+.child:hover .state {
+  color: white;
+}
+.place {
+  color: #234;
+  font-size: 30px;
+  font-family: Tw Cen MT;
+  font-weight: lighter;
+  text-align: center;
+}
+.state {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  color: #234;
+  font-family: Tw Cen MT;
+  font-size: 20px;
+  position: relative;
+  top: 30px;
+  margin-left: 30vh;
+}
+.content {
+  position: relative;
+  top: -40px;
+}
+button {
+  background-color: transparent;
+  width: 90px;
+  border: none;
+  font-size: 45px;
+  position: relative;
+  left: 86%;
+  bottom: 85vh;
+  color: #234;
+  height: 90px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.child:hover button {
+  color: white;
+}
